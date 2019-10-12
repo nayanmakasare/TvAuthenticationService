@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package TvAuthenticationService;
+
+service TvAuthenticationService{
+    rpc CloudwalkerAuthWall(TargetTv) returns (IsAuthorised);
+}
+
+message TargetTv{
+    string emac = 1;
+}
+
+message IsAuthorised{
+    bool result =1;
+}
